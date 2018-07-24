@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ZeroBank Automation Tests" verbose="2">
+
+	<test name="ZeroBank Automation Tests">
+		<packages>
+			<package name=".*"></package>
+		</packages>
+	</test>
+
+</suite>

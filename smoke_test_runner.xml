@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke test" verbose="2">
+	
+	<test name="Smoke test">
+		<packages>
+			<package name="com.cbt.tests.login"/>
+		</packages>
+	</test>	
+
+</suite>
