@@ -23,8 +23,6 @@ public class LoginTests extends TestBase {
 
     @Test()
     public void positiveloginTest() {
-	//Navigating to expected website
-	Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 	// Navigating to signin page
 	homePage.signin.click();
 	
