@@ -13,13 +13,13 @@ public class LoginPage {
 	PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id = "")
+    @FindBy(id = "user_login")
     public WebElement userName;
 
-    @FindBy(id = "")
+    @FindBy(id = "user_password")
     public WebElement password;
 
-    @FindBy(id = "")
+    @FindBy(xpath = "//input[@name ='submit']")
     public WebElement loginButton;
 
     @FindBy(id = "")
