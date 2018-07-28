@@ -41,5 +41,6 @@ public class LoginTests extends TestBase {
 	public void RandomTest() {
 		System.out.println("Second test");
 	}
-// Local changes
+
+	// Little changes
 }
