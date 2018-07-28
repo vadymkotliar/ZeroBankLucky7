@@ -11,9 +11,8 @@ import com.cbt.pages.HomePage;
 import com.cbt.pages.LoginPage;
 import com.cbt.tests.TestBase;
 import com.cbt.utilities.ConfigurationReader;
-import com.cbt.utilities.Driver;
 
-public class AccountActivityTest extends TestBase {
+public class CreditCardTest extends TestBase{
 	HomePage homePage = new HomePage();
 	LoginPage loginPage = new LoginPage();
 
@@ -31,7 +30,7 @@ public class AccountActivityTest extends TestBase {
 		selectTag.click();
 
 		Select list = new Select(selectTag);
-		list.selectByValue("4");
+		list.selectByValue("5");
 
 		String expected = "Show Transactions";
 		String actual = accountTab.TransactionsText.getText();
