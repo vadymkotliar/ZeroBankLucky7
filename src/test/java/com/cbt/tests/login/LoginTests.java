@@ -42,5 +42,4 @@ public class LoginTests extends TestBase {
 		System.out.println("Second test");
 	}
 
-	// RESOLVING CONFLICT
 }
