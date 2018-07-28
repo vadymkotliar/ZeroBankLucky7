@@ -12,7 +12,7 @@ import com.cbt.pages.LoginPage;
 import com.cbt.tests.TestBase;
 import com.cbt.utilities.ConfigurationReader;
 
-public class CreditCardTest extends TestBase{
+public class BrokerageTest extends TestBase {
 	HomePage homePage = new HomePage();
 	LoginPage loginPage = new LoginPage();
 
@@ -30,13 +30,11 @@ public class CreditCardTest extends TestBase{
 		selectTag.click();
 
 		Select list = new Select(selectTag);
-		list.selectByValue("5");
+		list.selectByValue("6");
 
 		String expected = "Show Transactions";
 		String actual = accountTab.TransactionsText.getText();
 		assertEquals(actual, expected);
 	}
-
-	
 
 }

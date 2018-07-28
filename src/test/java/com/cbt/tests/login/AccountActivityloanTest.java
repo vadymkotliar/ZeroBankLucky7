@@ -13,12 +13,12 @@ import com.cbt.tests.TestBase;
 import com.cbt.utilities.ConfigurationReader;
 import com.cbt.utilities.Driver;
 
-public class AccountActivityTest extends TestBase {
+public class AccountActivityloanTest extends TestBase {
 	HomePage homePage = new HomePage();
 	LoginPage loginPage = new LoginPage();
 
 	@Test()
-	public void AccountActivity() {
+	public void AccountActivityLoanTest() {
 		homePage.signin.click();
 		String userName = ConfigurationReader.getProperty("username");
 		String password = ConfigurationReader.getProperty("password");
