@@ -19,7 +19,9 @@ import com.cbt.utilities.ConfigurationReader;
 import com.cbt.utilities.Driver;
 
 public abstract class TestBase {
-    protected WebDriver driver;
+  
+	
+	protected WebDriver driver;
     protected Actions actions;
 
     protected ExtentReports report;
