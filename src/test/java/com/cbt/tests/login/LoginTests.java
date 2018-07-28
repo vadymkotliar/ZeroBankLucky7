@@ -18,30 +18,28 @@ import com.cbt.utilities.Driver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginTests extends TestBase {
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
+	HomePage homePage = new HomePage();
+	LoginPage loginPage = new LoginPage();
 
-    @Test()
-    public void positiveloginTest() {
-	// Navigating to signin page
-	homePage.signin.click();
-	
-	//Inserting singin credentials and signing in
-	String userName = ConfigurationReader.getProperty("username");
-	String password = ConfigurationReader.getProperty("password");
-	loginPage.login(userName, password);
-	
-	//Asserting that we are loged in
-	String expected = "Zero - Account Summary";
-	String actual = Driver.getDriver().getTitle();	
-	assertEquals(actual, expected);
-    }
-    
-    
-//  READY TO USE
-//    @Test(priority = 2, groups = {})
-//    public void positiveLoginUsingPOM() {
-//
-//    }
+	@Test()
+	public void positiveloginTest() {
+		// Navigating to signin page
+		homePage.signin.click();
+
+		// Inserting singin credentials and signing in
+		String userName = ConfigurationReader.getProperty("username");
+		String password = ConfigurationReader.getProperty("password");
+		loginPage.login(userName, password);
+
+		// Asserting that we are loged in
+		String expected = "Zero - Account Summary";
+		String actual = Driver.getDriver().getTitle();
+		assertEquals(actual, expected);
+	}
+
+	@Test()
+	public void RandomTest() {
+		System.out.println("Second test");
+	}
 
 }
