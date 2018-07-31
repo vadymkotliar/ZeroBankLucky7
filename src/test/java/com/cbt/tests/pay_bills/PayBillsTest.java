@@ -2,6 +2,7 @@ package com.cbt.tests.pay_bills;
 
 import static org.testng.Assert.assertEquals;
 
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
@@ -23,10 +24,10 @@ public class PayBillsTest extends TestBase {
 
 	payBillsPage.payBillsTab.click();
 	Select select = new Select(payBillsPage.payeeDropdown);
-	select.selectByValue("wellsfargo");
-
+	select.selectByValue("wellsfargo");	
 	select = new Select(payBillsPage.accountDropdown);
 	select.selectByValue("5");
+	select.selectByIndex(0);
 	payBillsPage.date.sendKeys("2018-07-16");
 	payBillsPage.description.sendKeys("default decription");
 	payBillsPage.payButton.click();
