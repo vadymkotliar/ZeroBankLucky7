@@ -10,6 +10,7 @@ import com.cbt.pages.HomePage;
 import com.cbt.pages.LoginPage;
 import com.cbt.tests.TestBase;
 import com.cbt.utilities.ConfigurationReader;
+import com.cbt.utilities.Driver;
 
 public class AccountSummeryTest extends TestBase {
 
@@ -20,7 +21,7 @@ public class AccountSummeryTest extends TestBase {
 //Goara TC180
 	
 	@Test 
-	public void accountsBalanceSummery() {
+	public void TC010_accountsBalanceSummery() {
 		homePage.signin.click();
 
 		
@@ -82,8 +83,38 @@ public class AccountSummeryTest extends TestBase {
 		String expected6 = "$780";
 		System.out.println(accountSummeryPage.loanTitle.getText()+" "+actualLoan+"\n");
 		assertEquals(actualLoan, expected6);
+		
+		
 		}
 	
+	@Test 
+	public void TC011_accountsBalanceSummery() throws InterruptedException {
+		
+		homePage.signin.click();
+
+		
+		String userName = ConfigurationReader.getProperty("username");
+		String password = ConfigurationReader.getProperty("password");
+		loginPage.login(userName, password);
+		
+		boolean b1 =accountSummeryPage.brokarageTitle.isEnabled();
+		System.out.println(b1);
+		boolean b2 =accountSummeryPage.loanTitle.isEnabled();
+		System.out.println(b2);
+		boolean b3 =accountSummeryPage.visaCheckingTitle.isEnabled();
+		System.out.println(b3);
+		assertTrue(accountSummeryPage.visaCreditCardTitle.isEnabled());
+		assertTrue(accountSummeryPage.savings1Title.isEnabled());
+		assertTrue(accountSummeryPage.savings2Title.isEnabled());
+		
+		
+		
+		
+		
+		
+		
 	
+
+}
 
 }

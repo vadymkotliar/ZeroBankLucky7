@@ -33,6 +33,8 @@ public abstract class TestBase {
     @BeforeTest
     public void setUpTest() {
 	// actual reporter
+    	driver = Driver.getDriver();
+
 	report = new ExtentReports();
 	// System.getProperty("user.dir") ---> get the path to current project
 	// test-output --> folder in the current project, will be created by testng if
@@ -82,12 +84,13 @@ public abstract class TestBase {
 	} else if (result.getStatus() == ITestResult.SKIP) {
 	    extentLogger.skip("Test Case Skipped is " + result.getName());
 	}
-//	Driver.closeDriver();
+	Driver.closeDriver();
     }
 
     @AfterTest
     public void tearDownTest() {
 	report.flush();
+
     }
 
 }
