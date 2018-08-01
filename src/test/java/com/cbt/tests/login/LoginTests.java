@@ -17,6 +17,7 @@ import com.cbt.utilities.Driver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+
 public class LoginTests extends TestBase {
 	HomePage homePage = new HomePage();
 	LoginPage loginPage = new LoginPage();
@@ -36,6 +37,17 @@ public class LoginTests extends TestBase {
 		String actual = Driver.getDriver().getTitle();
 		assertEquals(actual, expected);
 	}
+	@Test
+	public void negativeLoginTest() {
+		// Navigating to signin page
+		homePage.signin.click();
+		loginPage.userName.sendKeys("invalid");
+		loginPage.password.sendKeys("test");
+		loginPage.loginButton.click();
+		String errMsg = loginPage.invalidUserNameErrMsg.getText();
+		assertEquals(errMsg, "invaid Login and Password");
+	}
+
 
 	@Test()
 	public void RandomTest() {
