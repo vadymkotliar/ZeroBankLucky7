@@ -1,0 +1,12 @@
+Using git and GitHub
+------------------------------------------------
+
+
+1. Create your page object in pages package.
+2. Create your test in tests package.
+3. "git add ."
+4. "git commit -m "your message here about your testcase""
+5. "git push -u origin YOUR_BRANCH_NAME"
+6. "git checkout master"
+7. git pull
+
