@@ -19,11 +19,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class LoginTests extends TestBase {
-	HomePage homePage = new HomePage();
-	LoginPage loginPage = new LoginPage();
+	HomePage homePage;
+	LoginPage loginPage;
 
 	@Test()
 	public void positiveloginTest() {
+		homePage = new HomePage();
 		// Navigating to signin page
 		homePage.signin.click();
 
@@ -39,6 +40,8 @@ public class LoginTests extends TestBase {
 	}
 	@Test
 	public void negativeLoginTest() {
+		homePage = new HomePage();
+		loginPage = new LoginPage();
 		// Navigating to signin page
 		homePage.signin.click();
 		loginPage.userName.sendKeys("invalid");
