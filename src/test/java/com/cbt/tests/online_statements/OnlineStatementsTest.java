@@ -12,12 +12,15 @@ import com.cbt.tests.TestBase;
 import com.cbt.utilities.ConfigurationReader;
 
 public class OnlineStatementsTest extends TestBase {
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    OnlineStatements onlineStatements = new OnlineStatements();
+    HomePage homePage;
+    LoginPage loginPage;
+    OnlineStatements onlineStatements;
 
     @Test
     public void TC019_StatementPositive() {
+	homePage = new HomePage();
+	loginPage = new LoginPage();
+	onlineStatements = new OnlineStatements();
 	homePage.signin.click();
 	loginPage.login(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
 

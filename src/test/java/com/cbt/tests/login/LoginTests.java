@@ -1,3 +1,4 @@
+
 package com.cbt.tests.login;
 
 import static org.testng.Assert.assertEquals;
@@ -17,44 +18,31 @@ import com.cbt.utilities.Driver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 public class LoginTests extends TestBase {
-	HomePage homePage;
-	LoginPage loginPage;
+    HomePage homePage;
+    LoginPage loginPage;
 
-	@Test()
-	public void positiveloginTest() {
-		homePage = new HomePage();
-		// Navigating to signin page
-		homePage.signin.click();
+    @Test()
+    public void positiveloginTest() {
+	homePage = new HomePage();
+	loginPage = new LoginPage();
+	// Navigating to signin page
+	homePage.signin.click();
 
-		// Inserting singin credentials and signing in
-		String userName = ConfigurationReader.getProperty("username");
-		String password = ConfigurationReader.getProperty("password");
-		loginPage.login(userName, password);
+	// Inserting singin credentials and signing in
+	String userName = ConfigurationReader.getProperty("username");
+	String password = ConfigurationReader.getProperty("password");
+	loginPage.login(userName, password);
 
-		// Asserting that we are loged in
-		String expected = "Zero - Account Summary";
-		String actual = Driver.getDriver().getTitle();
-		assertEquals(actual, expected);
-	}
-	@Test
-	public void negativeLoginTest() {
-		homePage = new HomePage();
-		loginPage = new LoginPage();
-		// Navigating to signin page
-		homePage.signin.click();
-		loginPage.userName.sendKeys("invalid");
-		loginPage.password.sendKeys("test");
-		loginPage.loginButton.click();
-		String errMsg = loginPage.invalidUserNameErrMsg.getText();
-		assertEquals(errMsg, "invaid Login and Password");
-	}
+	// Asserting that we are loged in
+	String expected = "Zero - Account Summary";
+	String actual = Driver.getDriver().getTitle();
+	assertEquals(actual, expected);
+    }
 
-
-	@Test()
-	public void RandomTest() {
-		System.out.println("Second test");
-	}
+//    @Test()
+//    public void RandomTest() {
+//	System.out.println("Second test");
+//    }
 
 }
