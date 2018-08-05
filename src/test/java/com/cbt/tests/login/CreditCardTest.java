@@ -15,7 +15,7 @@ import com.cbt.utilities.ConfigurationReader;
 public class CreditCardTest extends TestBase{
 	HomePage homePage = new HomePage();
 	LoginPage loginPage = new LoginPage();
-
+//TC009 creedit card activation Duygu' case 
 	@Test()
 	public void AccountActivityCreditCard() {
 		homePage.signin.click();
