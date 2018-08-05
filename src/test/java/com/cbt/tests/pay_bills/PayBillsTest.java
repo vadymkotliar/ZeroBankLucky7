@@ -13,12 +13,16 @@ import com.cbt.tests.TestBase;
 import com.cbt.utilities.ConfigurationReader;
 
 public class PayBillsTest extends TestBase {
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    PayBillsPage payBillsPage = new PayBillsPage();
+    HomePage homePage;
+    LoginPage loginPage;
+    PayBillsPage payBillsPage;
 
     @Test
     public void TC017_PayBillsNegative() {
+	homePage = new HomePage();
+	loginPage = new LoginPage();
+	payBillsPage = new PayBillsPage();
+	
 	homePage.signin.click();
 	loginPage.login(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
 
