@@ -17,7 +17,7 @@ public class CreditCardTest extends TestBase {
     LoginPage loginPage;
 
     @Test()
-    public void AccountActivityCreditCard() {
+    public void TC009_AccountActivityCreditCard() {
 	homePage = new HomePage();
 	loginPage = new LoginPage();
 	homePage.signin.click();
