@@ -12,6 +12,7 @@ import com.cbt.pages.LoginPage;
 import com.cbt.tests.TestBase;
 import com.cbt.utilities.ConfigurationReader;
 
+
 public class CreditCardTest extends TestBase {
     HomePage homePage;
     LoginPage loginPage;
@@ -38,5 +39,4 @@ public class CreditCardTest extends TestBase {
 	String actual = accountTab.TransactionsText.getText();
 	assertEquals(actual, expected);
     }
-
 }
