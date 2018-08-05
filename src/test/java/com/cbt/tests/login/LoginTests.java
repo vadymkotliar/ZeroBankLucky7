@@ -21,7 +21,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class LoginTests extends TestBase {
 	HomePage homePage;
 	LoginPage loginPage;
-
+//Duygu's test case .Tc006 and tc007
 	@Test()
 	public void positiveloginTest() {
 		homePage = new HomePage();
