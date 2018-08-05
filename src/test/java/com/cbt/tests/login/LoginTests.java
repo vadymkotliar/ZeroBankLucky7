@@ -49,7 +49,7 @@ public class LoginTests extends TestBase {
 		loginPage.password.sendKeys("test");
 		loginPage.loginButton.click();
 		String errMsg = loginPage.invalidUserNameErrMsg.getText();
-		assertEquals(errMsg, "invaid Login and Password");
+		assertEquals(errMsg, "invaid Login and Password"); //
 	}
 
 //    @Test()
