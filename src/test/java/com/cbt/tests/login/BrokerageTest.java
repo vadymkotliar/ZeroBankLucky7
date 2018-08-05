@@ -17,7 +17,7 @@ public class BrokerageTest extends TestBase {
     LoginPage loginPage;
 
     @Test()
-    public void AccountActivityCreditCard() {
+    public void TC014_AccountActivityCreditCard() {
 	homePage = new HomePage();
 	loginPage = new LoginPage();
 	homePage.signin.click();

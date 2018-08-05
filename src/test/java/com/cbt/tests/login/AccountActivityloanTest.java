@@ -18,7 +18,7 @@ public class AccountActivityloanTest extends TestBase {
 	LoginPage loginPage = new LoginPage();
 
 	@Test()
-	public void AccountActivityLoanTest() {
+	public void TC013_AccountActivityLoanTest() {
 		homePage.signin.click();
 		String userName = ConfigurationReader.getProperty("username");
 		String password = ConfigurationReader.getProperty("password");

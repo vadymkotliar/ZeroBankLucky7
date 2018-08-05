@@ -23,7 +23,7 @@ public class LoginTests extends TestBase {
     LoginPage loginPage;
 
     @Test()
-    public void positiveloginTest() {
+    public void TC006_positiveloginTest() {
 	homePage = new HomePage();
 	loginPage = new LoginPage();
 	// Navigating to signin page
@@ -39,6 +39,19 @@ public class LoginTests extends TestBase {
 	String actual = Driver.getDriver().getTitle();
 	assertEquals(actual, expected);
     }
+    
+    @Test
+	public void TC007_negativeLoginTest() {
+		homePage = new HomePage();
+		loginPage = new LoginPage();
+		// Navigating to signin page
+		homePage.signin.click();
+		loginPage.userName.sendKeys("invalid");
+		loginPage.password.sendKeys("test");
+		loginPage.loginButton.click();
+		String errMsg = loginPage.invalidUserNameErrMsg.getText();
+		assertEquals(errMsg, "invaid Login and Password"); //
+	}
 
 //    @Test()
 //    public void RandomTest() {
