@@ -22,7 +22,7 @@ public class LoginPage {
     @FindBy(xpath = "//input[@name ='submit']")
     public WebElement loginButton;
 
-    @FindBy(id = "")
+    @FindBy(xpath = "//div[contains(text(),'Login and/or password are wrong.')]")
     public WebElement invalidUserNameErrMsg;
 
     public void login(String uid, String pwd) {
