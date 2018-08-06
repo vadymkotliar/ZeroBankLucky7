@@ -3,7 +3,7 @@
 
 	<test name="Smoke test">
 		<packages>
-		 <package name="com.cbt.tests.login" /> 
+		 	<package name="com.cbt.tests.login" /> 
 			<package name="com.cbt.tests.online_statements" />
 			<package name="com.cbt.tests.pay_bills" />
 		</packages>
