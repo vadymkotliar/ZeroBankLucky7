@@ -14,30 +14,30 @@ import com.cbt.utilities.ConfigurationReader;
 import com.cbt.utilities.Driver;
 
 public class AccountActivityloanTest extends TestBase {
-	HomePage homePage = new HomePage();
-	LoginPage loginPage = new LoginPage();
+    HomePage homePage;
+    LoginPage loginPage;
 
-	@Test()
-	public void TC013_AccountActivityLoanTest() {
-		homePage.signin.click();
-		String userName = ConfigurationReader.getProperty("username");
-		String password = ConfigurationReader.getProperty("password");
-		loginPage.login(userName, password);
+    @Test()
+    public void TC013_AccountActivityLoanTest() {
+	homePage = new HomePage();
+	loginPage = new LoginPage();
+	homePage.signin.click();
+	String userName = ConfigurationReader.getProperty("username");
+	String password = ConfigurationReader.getProperty("password");
+	loginPage.login(userName, password);
 
-		AccountActivityPage accountTab = new AccountActivityPage();
-		accountTab.AccountactivityTab.click();
+	AccountActivityPage accountTab = new AccountActivityPage();
+	accountTab.AccountactivityTab.click();
 
-		WebElement selectTag = accountTab.DropDown;
-		selectTag.click();
+	WebElement selectTag = accountTab.DropDown;
+	selectTag.click();
 
-		Select list = new Select(selectTag);
-		list.selectByValue("4");
+	Select list = new Select(selectTag);
+	list.selectByValue("4");
 
-		String expected = "Show Transactions";
-		String actual = accountTab.TransactionsText.getText();
-		assertEquals(actual, expected);
-	}
-
-	
+	String expected = "Show Transactions";
+	String actual = accountTab.TransactionsText.getText();
+	assertEquals(actual, expected);
+    }
 
 }
